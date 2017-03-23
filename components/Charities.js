@@ -9,6 +9,7 @@ import {
 export class Charities extends React.Component {
   render() {
     return (
+
       <View>
       <Text>My Charities:</Text>
         <ScrollView
@@ -55,10 +56,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+
   },
   charityBox: {
     margin: 5,
+<<<<<<< HEAD
+    flexDirection: 'row',
+    justifyContent: 'center',
+    height: 90,
+    width: '25%',
+=======
     height: 90,
     width: 90,
+>>>>>>> aced3edb1e40b53c33e6df28ca04978c135485db
   }
 });
