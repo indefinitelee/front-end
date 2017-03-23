@@ -1,32 +1,84 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoConfigView } from '@expo/samples';
+import {
+  Image,
+  Linking,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
-export default class SettingsScreen extends React.Component {
+import { MonoText } from '../components/StyledText';
+import { MonthlyCap } from '../components/MonthlyCap';
+import { TodaysDate } from '../components/TodaysDate';
+import { Activity } from '../components/Activity';
+import { ProfilePic } from '../components/ProfilePic';
+import { UserName } from '../components/UserName';
+
+export default class ProfileScreen extends React.Component {
   static route = {
     navigationBar: {
-      title: 'exp.json',
+      visible: false,
     },
   };
 
   render() {
     return (
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={this.props.route.getContentContainerStyle()}>
+        <View style={styles.container}>
+          <View style={styles.headerBar}>
+            <UserName />
+            <TodaysDate />
+          </View>
+          <View style={styles.piechart}>
+            <ProfilePic />
+          </View>
+          <View style={styles.charities}>
+            <MonthlyCap />
+          </View>
+            <ScrollView style={styles.feed}>
+              <Activity />
+            </ScrollView>
+        </View>
+      )}
+  };
 
-        {/* Go ahead and delete ExpoConfigView and replace it with your
-           * content, we just wanted to give you a quick view of your config */
-        }
-        <ExpoConfigView />
-
-      </ScrollView>
-    );
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
+  headerBar: {
+    padding: 20,
+    // flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: 'rgba(100,149,237, 1)',
+    width: '100%',
+    height: 80,
+  },
+  piechart: {
+    padding: 20,
+    // flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: '100%',
+    height: 200,
+  },
+  charities: {
+    padding: 20,
+    // flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: 'rgba(100,149,237, 0.3)',
+    width: '100%',
+    height: 170,
+  },
+  feed: {
+    backgroundColor: 'rgba(100,149,237, 0.2)',
+    width: '100%',
+  }
 });
