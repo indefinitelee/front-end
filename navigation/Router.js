@@ -14,5 +14,5 @@ export default createRouter(() => ({
   profile: () => ProfileScreen,
   activity: () => ActivityScreen,
   rootNavigation: () => RootNavigation,
-  settings: () => SettingsScreen,
+
 }));

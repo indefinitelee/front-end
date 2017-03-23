@@ -18,6 +18,15 @@ import { ProfilePic } from '../components/ProfilePic';
 import { UserName } from '../components/UserName';
 
 export default class ProfileScreen extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      username: 'carla stockalper',
+    }
+  }
+
   static route = {
     navigationBar: {
       visible: false,
@@ -35,7 +44,7 @@ export default class ProfileScreen extends React.Component {
             <ProfilePic />
           </View>
           <View style={styles.charities}>
-            <MonthlyCap />
+            <MonthlyCap username={this.state.username}/>
           </View>
             <ScrollView style={styles.feed}>
               <Activity />

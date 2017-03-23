@@ -1,26 +1,26 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  Text,
+  Image
+ } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
+import { Activity } from '../components/Activity';
 
-export default class LinksScreen extends React.Component {
+export default class ActivityScreen extends React.Component {
   static route = {
     navigationBar: {
-      title: 'Links',
+      title: 'Activity',
     },
   };
 
   render() {
     return (
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={this.props.route.getContentContainerStyle()}>
-
-        {/* Go ahead and delete ExpoLinksView and replace it with your
-           * content, we just wanted to provide you with some helpful links */
-        }
-        <ExpoLinksView />
-
-      </ScrollView>
+      <View style={styles.container}>
+        <Activity />
+      </View>
     );
   }
 }

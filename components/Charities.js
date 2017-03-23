@@ -60,14 +60,9 @@ const styles = StyleSheet.create({
   },
   charityBox: {
     margin: 5,
-<<<<<<< HEAD
     flexDirection: 'row',
     justifyContent: 'center',
     height: 90,
-    width: '25%',
-=======
-    height: 90,
     width: 90,
->>>>>>> aced3edb1e40b53c33e6df28ca04978c135485db
   }
 });

@@ -5,7 +5,7 @@ import { ExpoLinksView } from '@expo/samples';
 export default class SettingsScreen extends React.Component {
   static route = {
     navigationBar: {
-      title: 'Links',
+      title: 'Settings',
     },
   };
 

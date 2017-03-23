@@ -14,7 +14,7 @@ export class MonthlyCap extends React.Component {
           Monthly Cap
         </Text>
         <Text>
-          Adjust
+          {this.props.username}
         </Text>
       </View>
     );

@@ -6,7 +6,7 @@ import {
   Text,
   Linking,
   Image } from 'react-native';
-  import Hyperlink from 'react-native-hyperlink';
+
 
 export class Feed extends React.Component {
   render() {
