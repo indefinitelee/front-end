@@ -3,19 +3,15 @@ import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { NavigationProvider, StackNavigation } from '@expo/ex-navigation';
 import { FontAwesome } from '@expo/vector-icons';
-
 import Router from './navigation/Router';
 import cacheAssetsAsync from './utilities/cacheAssetsAsync';
-
 class AppContainer extends React.Component {
   state = {
     appIsReady: false,
   };
-
   componentWillMount() {
     this._loadAssetsAsync();
   }
-
   async _loadAssetsAsync() {
     try {
       await cacheAssetsAsync({
@@ -35,7 +31,6 @@ class AppContainer extends React.Component {
       this.setState({ appIsReady: true });
     }
   }
-
   render() {
     if (this.state.appIsReady) {
       return (
@@ -46,7 +41,6 @@ class AppContainer extends React.Component {
               initialRoute={Router.getRoute('rootNavigation')}
             />
           </NavigationProvider>
-
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
           {Platform.OS === 'android' &&
             <View style={styles.statusBarUnderlay} />}
@@ -57,7 +51,6 @@ class AppContainer extends React.Component {
     }
   }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -68,5 +61,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.2)',
   },
 });
-
 Expo.registerRootComponent(AppContainer);
