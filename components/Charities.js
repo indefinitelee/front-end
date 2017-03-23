@@ -9,8 +9,8 @@ import {
 export class Charities extends React.Component {
   render() {
     return (
-      <View>
-        <Text>My Charities:</Text>
+      <ScrollView>
+        <Text style={{fontWeight: '700', color: 'rgba(128, 128, 128, 1)'}}>My Charities:</Text>
         <View style={styles.charityBoxContainer}>
           <Image
             style={styles.charityBox}
@@ -25,7 +25,7 @@ export class Charities extends React.Component {
             source={{uri: 'https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fmedia.glassdoor.com%2Fsqll%2F20417%2Fkentucky-farm-bureau-insurance-squarelogo.png&f=1'}}
           />
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -38,12 +38,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+
   },
   charityBox: {
     margin: 5,
     flexDirection: 'row',
     justifyContent: 'center',
-    height: 100,
-    width: 100,
+    height: 90,
+    width: '25%',
   }
 });
