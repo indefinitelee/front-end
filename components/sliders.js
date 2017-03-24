@@ -30,12 +30,12 @@ export default class App extends React.Component {
         <Slider
           {...this.props}
           onSlidingComplete={(value) => this.setState({
-            slideCompletionValue: value,
-            slideCompletionCount: this.state.slideCompletionCount + 1})} />
+            slideCompletionValue: value })}
+        />
         <Text>
-          Completions: {this.state.slideCompletionCount} Value: {this.state.slideCompletionValue}
+          Value: {this.state.slideCompletionValue}
         </Text>
-      </View
+      </View>
     );
   }
 }
