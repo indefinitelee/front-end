@@ -30,7 +30,7 @@ export default class App extends React.Component {
 
   static route = {
     navigationBar: {
-      visible: false,
+      visible: true,
     },
   };
 

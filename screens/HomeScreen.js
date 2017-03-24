@@ -18,6 +18,14 @@ import { GoalPiechart } from '../components/GoalPiechart';
 import { UserName } from '../components/UserName';
 
 export default class HomeScreen extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      username: 'carla stockalper',
+    }
+  }
   static route = {
     navigationBar: {
       visible: false,
@@ -29,7 +37,7 @@ export default class HomeScreen extends React.Component {
 
         <View style={styles.container}>
           <View style={styles.headerBar}>
-            <UserName />
+            <UserName username={this.state.username} />
             <TodaysDate />
           </View>
           <View style={styles.piechart}>
